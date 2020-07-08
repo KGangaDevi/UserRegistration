@@ -5,7 +5,7 @@ read pwd
 #pattern="^(([a-z0-9]+[[:upper:]])+[*_#%@])+{8,})$"
 
 #pattern="^([a-zA-Z0-9]*[*#@_])*$"
-if [[ ${#pwd} -ge 8 ]]
+if [[ ${#pwd} -ge 8 && "$pwd" == *[[:upper:]]* ]]
 then
 	echo "Pattern Found"
 else
